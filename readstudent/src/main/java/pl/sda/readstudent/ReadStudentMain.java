@@ -32,9 +32,9 @@ public class ReadStudentMain {
         try {
             Student[] studentArray = mapper.readValue(new File("studentList.json"), Student[].class);
             List<Student> readStudentArray = Arrays.asList(studentArray);
-            Stream<Student> namesStartingWithA = readStudentArray.stream()
-                    .filter(x -> x.getName().startsWith("A"));
-            System.out.println(namesStartingWithA.collect(Collectors.toList()));
+            readStudentArray.stream()
+                    .filter(x -> x.getName().startsWith("A"))
+                    .forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
