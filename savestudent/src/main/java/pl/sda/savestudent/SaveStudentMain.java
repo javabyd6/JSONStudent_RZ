@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author Remigiusz Zudzin
  */
-public class Main {
+public class SaveStudentMain {
 
     private static ObjectMapper mapper = new ObjectMapper();
 
